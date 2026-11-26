@@ -1,0 +1,10 @@
+[
+  {"name":"current-version","order":"RO-101","actor":"cedar-writer","expected":{"status":200,"evidence_ids":["CED-CAMERA@2"],"outcome":"draft_follow_up"}},
+  {"name":"attachment-present","order":"RO-102","actor":"cedar-writer","expected":{"status":200,"evidence_ids":["CED-CAMERA@2"],"outcome":"complete"}},
+  {"name":"archived-only","order":"RO-103","actor":"cedar-writer","expected":{"status":200,"evidence_ids":["CED-ALIGN@1"],"outcome":"abstain","reason":"stale_procedure"}},
+  {"name":"no-keyword-match","order":"RO-104","actor":"cedar-writer","expected":{"status":200,"evidence_ids":[],"outcome":"abstain","reason":"missing_procedure"}},
+  {"name":"cross-shop","order":"RO-201","actor":"cedar-writer","expected":{"status":404,"evidence_ids":[],"outcome":"denied","reason":"Order unavailable"}},
+  {"name":"regional-shop-specific","order":"RO-201","actor":"regional-reviewer","expected":{"status":200,"evidence_ids":["FLT-CAMERA@1"],"outcome":"draft_follow_up"}},
+  {"name":"flint-local","order":"RO-201","actor":"flint-writer","expected":{"status":200,"evidence_ids":["FLT-CAMERA@1"],"outcome":"draft_follow_up"}},
+  {"name":"unknown-order","order":"RO-999","actor":"regional-reviewer","expected":{"status":404,"evidence_ids":[],"outcome":"denied","reason":"Order unavailable"}}
+]
